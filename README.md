@@ -42,7 +42,7 @@ If you already have a local machine or laptop that have Ubuntu, you don't need t
 - Install virtualbox 
 - Go to Virtualbox --> Preferences... --> Extensions --> Add "New package" button 
 
-Note
+#### Note
 Double clicking extension pack will just open the virtualbox but won't install automatically.  
 
 **Virtualbox**  
@@ -62,11 +62,19 @@ Once the VM is created,
 - go to VirtualBox Settings 
 - `System` --> `Processors` --> 2CPU 
 - `Network` --> `Enabled Network Adapter` --> Attached to `Bridged Adapter` 
-- `Port` --> `USB` --> `Enabled USB Controller` --> `USB 3.0 (xHCI) Controller 
+- `Port` --> `USB` --> `Enabled USB Controller` --> `USB 3.0 (xHCI) Controller` 
+
+#### Note 
+Virtualbox extension package allows virtualbox to set up USB as an exclusive USB port. Remember that the micro-USB you're connecting from the Jetson box to your local machine (USB), without the functionality that extension package provides, the **host** VM (virtual machine) that you created in virtualbox will not recognize the USB connection. 
 
 ## Host Launch 
 
+For now, all you've been doing is creating an image that will have Ubuntu 64 bit with all pre-defined memory and file allowance. But you still don't have the actual Ubuntu OS image that will install Ubuntu into your virtualbox pre-defined VM. 
+
+- Download Ubuntu 64 bit <a href="http://releases.ubuntu.com/16.04/">Here</a> --> `ubuntu-16.04.5-desktop-amd64.iso` 1.5G   
 - click **Start** 
+
+
 
 
 
