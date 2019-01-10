@@ -31,9 +31,8 @@ The target Jetson TX2 has no OS installed. So we're going to install Ubuntu 16.0
 <img src="img/flowchart.png" width="800"></p>
 <p align="center">Figure. Jetson TX2 and local Host setup</p>
 
-## Installation 
-
-**Host**  
+## Creating Host  
+ 
 The host that will flash OS (see below) to Jetson box. In older version of Nvidia TX1, I saw people tested with Ubuntu 14.0. But for TX2, I only tested with Ubuntu 16.04 and it works fine. Host OS is Ubuntu that will download Jetpack (see below) and do all the installation to Jetson TX2. I'm interchangeably using the word Jetson box and Jetson TX2. They're all the same. It's credit size GPU motherboard with all essential ports for ethernet, USB, wi-fi, memory, etc. 
 
 If you already have a local machine or laptop that have Ubuntu, you don't need to go an extra mile setting up the virtual box. If you don't have one like me, you might want to install virtualbox 6.0 in your local laptop instead of buying a new laptop with Ubuntu OS.  
@@ -43,7 +42,9 @@ If you already have a local machine or laptop that have Ubuntu, you don't need t
 - Go to Virtualbox --> Preferences... --> Extensions --> Add "New package" button 
 
 #### Note
-Double clicking extension pack will just open the virtualbox but won't install automatically.  
+- **extension pack** = Double clicking extension pack will just open the virtualbox but won't install automatically.  
+- **flash OS** means installing OS into the Jetson TX2 (target) 
+- **Jetpack** is the software you'd download and install in host and use it to do all the flashing and installing CUDA, tensorflow into the Jetson TX2. 
 
 **Virtualbox**  
 
@@ -67,12 +68,19 @@ Once the VM is created,
 #### Note 
 Virtualbox extension package allows virtualbox to set up USB as an exclusive USB port. Remember that the micro-USB you're connecting from the Jetson box to your local machine (USB), without the functionality that extension package provides, the **host** VM (virtual machine) that you created in virtualbox will not recognize the USB connection. 
 
-## Host Launch 
+## Install Ubuntu 64 OS into Host 
 
 For now, all you've been doing is creating an image that will have Ubuntu 64 bit with all pre-defined memory and file allowance. But you still don't have the actual Ubuntu OS image that will install Ubuntu into your virtualbox pre-defined VM. 
 
 - Download Ubuntu 64 bit <a href="http://releases.ubuntu.com/16.04/">Here</a> --> `ubuntu-16.04.5-desktop-amd64.iso` 1.5G   
+
+After download is done, 
+- select your created Ubuntu VM on the left panel on the virtualbox 
 - click **Start** 
+- choose the `ubuntu-16.04.5-desktop-amd64.iso` image you just downloaded from the dropdown selection. 
+- When the screen asks, click `Install Ubuntu` 
+
+This will 
 
 
 
