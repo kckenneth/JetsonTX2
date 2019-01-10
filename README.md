@@ -14,18 +14,7 @@ These two are required to setup.
 - wireless keyboard (to connect to Jetson box)
 - wireless mouse (to connect to Jetson box)  
 You can buy wireless keyboard and mouse combo. I bought <a href="https://www.amazon.com/gp/product/B079JLY5M5/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1" target="_blank">this one</a> from Amazon. 
-
-
-<Link to="https://www.amazon.com/gp/product/B079JLY5M5/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1" params={myParams} target="_blank">this is</link>
-  
-<link https://www.amazon.com/gp/product/B079JLY5M5/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1 target="_blank">
-
-Host
-Target
-Keyboard
-Mouse
-Ethernet cable 
-micro-USB cable 
-Monitor (HDMI display) 
+- Monitor (for HDMI display from Jetson box)
+- Ethernet cable 
 
 
