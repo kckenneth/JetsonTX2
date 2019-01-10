@@ -124,6 +124,43 @@ This will launch the Jetpack 3.3 Installer.
 <img src="img/jetpack_manager.png" width="600"></p>
 <p align="center">Figure. Jetpack component manager</p>
 
+Look carefully what components Jetpack has and it becomes much clearer when it comes to troubleshooting. Jetpack components manager has two major components: (1) `Host - Ubuntu` and (2) `Target - Jetson TX2/TX2i`. Under these components, there are several sub-components that Jetpack will manager to install. You can either customize and select which components to install or just do **full** installation. In the figure above, you see `no action` under `Host - Ubuntu` because I have already installed those components. 
+
+The reason why I mentioned those components is when you have a internet connection issue, you can switch over to `NAT` from `Bridged Adapter` in Network settings in Virtualbox so that Jetpack can download all those components. 
+
+- Click "Next" for full installation 
+- If the components are not downloaded properly and error occurs, switch to `NAT` in network setting. You don't need to shut down the Host Ubuntu. Just go to the bottom bar of your **Host** screen, where you'd see two computers icon (probably 4th icon) --> Network setting --> Attached to `NAT`. 
+- Once the Jetpack downloaded all the components, it will install all components into the Host. 
+- Once it's done, and freeze at the `Flash OS image to Target`, you can now establish the micro-USB connection between the Host and the Jetson TX2 (target). 
+- Power off the Jetson (unplug the AC adapter) 
+- Plug micro-USB between Jetson and the Host (Your local machine that has the virtualbox installed and Ubuntu VM is running) 
+- Power on the Jetson (plug the AC adapter) 
+- Press and release the power button 
+- Press the `FORCE RECOVERY` button and hold 
+- Press and release the `RESET` button while holding the `FORCE RECOVERY` button 
+- Wait 2 seconds until finally release the `FORCE RECOVERY` button 
+
+You wouldn't see anything in your Target HDMI display. 
+
+- Go to Host VM terminal
+- `lsusb` to check `Nvidia Corp` is listed in USB drive 
+- run `./Jetpack-L4T-3.3-linux-x64_b39.run` 
+- In components manager selection, from `Target - Jetson TX2/TX2i`, Jetpack will flash OS (Ubuntu 16.04 OS into Jetson TX2 and all the components listed under the major components. 
+- If it runs well, it'd be done within a few minutes. 
+
+- If the installation freezes at `Determining the IP address`, you can stop the installation by `Ctrl+C` in Host VM. 
+- Reboot the Jetson (Press the `RESET` button) 
+Since it now has the OS already installed, you'd see Ubuntu 16.04 version is up and running. 
+- Check the IP address of the Jetson (Target) at the far upper right corner, wi-fi connection 
+- eth0 and IP address would be `10.0.0.7`. 
+
+#### Note
+Some says it's close to `198.168.xx.xx`. In my IP list, it was under `l4tbr0` and it didn't work. 
+
+- Once the IP address is established, Jetpack from Host will install all sub-components (CUDA, TensorRT, etc) into the Jetson.
+- You're now finished with a complete installation. 
+
+
 
 
 
