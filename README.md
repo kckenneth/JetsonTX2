@@ -27,6 +27,10 @@ There are a few things that you need to be familiar with.
 
 The target Jetson TX2 has no OS installed. So we're going to install Ubuntu 16.04 in Jetson TX2 via Host. 
 
+<p align="center">
+<img src="img/flowchart.png" width="600"></p>
+<p align="center">Figure. Jetson TX2 and local Host setup</p>
+
 ## Installation 
 
 The host that will flash OS (see below) to Jetson box. In older version of Nvidia TX1, I saw people tested with Ubuntu 14.0. But for TX2, I only tested with Ubuntu 16.04 and it works fine. Host OS is Ubuntu that will download Jetpack and do all the installation to Jetson TX2. I'm interchangely using Jetson box and Jetson TX2. They're all the same. It's credit size GPU mother board with all essential ports for ethernet, USB, wi-fi, memory, etc. 
