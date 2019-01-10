@@ -83,11 +83,45 @@ After download is done,
 This will install Ubuntu 64 in your VM. The screen display will be cropped out and sometimes you can't see the `next` button. I go by tab and press either space button or return/enter button and it works fine. To make it normal display, you can only do so after completely installing the OS. 
 
 - open terminal in your Host Ubuntu VM 
-- `sudo apt-get update` 
+```
+sudo apt-get update
+```
 
 Some do it by going into Host Ubuntu, menu bar `Devices` --> `Insert Guest Additions CD Image...`. It didn't work for me. There are several approaches to make it work. This is what I did and it automatically readjusts the screen size after the installation. 
 
-- `sudo apt-get install virtualbox-guest-additions-iso` 
+```
+sudo apt-get install virtualbox-guest-additions-iso
+```
+
+## Install Jetpack 3.3 
+
+Here I need to explain what's going on behind and some of the issues I got. Downloading and installing Jetpack requires the internet connection. Since our Host VM is using the `Bridged Adapter`, and when the Jetson Box is in `FORCE RECOVERY` mode (Which we will go in details later), it cannot establish the internet connection with `Bridge Adapter`. So instead of first connecting the Jetson TX2 with micro-USB and making the `FORCE RECOVERY` mode, I first downloaded and installed Jetpack in Host without connecting to the Jetson TX2. 
+
+- Open the firefox browser in Host VM 
+- Go to <a href="https://developer.nvidia.com/embedded/jetpack">Nvidia developer download site</a> 
+- Register the account to download the Jetpack 3.3 
+
+After the download is done, go to Host VM terminal and change to the directory where the Jetpack 3.3 was downloaded. 
+```
+cd Downloads
+chmod +x Jetpack-L4T-3.3-linux-x64_b39.run
+./Jetpack-L4T-3.3-linux-x64_b39.run 
+``` 
+This will launch the Jetpack 3.3 Installer. 
+
+<p align="center">
+<img src="img/jetpack.png" width="600"></p>
+<p align="center">Figure. Running Jetpack 3.3</p>
+
+- I chose `No, disable usage collection` 
+- select Jetson TX2
+
+<p align="center">
+<img src="img/jetsontx2.png" width="600"></p>
+<p align="center">Figure. Running Jetpack 3.3</p>
+
+
+
 
 
 
