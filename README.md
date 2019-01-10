@@ -33,9 +33,10 @@ The target Jetson TX2 has no OS installed. So we're going to install Ubuntu 16.0
 
 ## Installation 
 
-The host that will flash OS (see below) to Jetson box. In older version of Nvidia TX1, I saw people tested with Ubuntu 14.0. But for TX2, I only tested with Ubuntu 16.04 and it works fine. Host OS is Ubuntu that will download Jetpack and do all the installation to Jetson TX2. I'm interchangely using Jetson box and Jetson TX2. They're all the same. It's credit size GPU mother board with all essential ports for ethernet, USB, wi-fi, memory, etc. 
+**Host**  
+The host that will flash OS (see below) to Jetson box. In older version of Nvidia TX1, I saw people tested with Ubuntu 14.0. But for TX2, I only tested with Ubuntu 16.04 and it works fine. Host OS is Ubuntu that will download Jetpack (see below) and do all the installation to Jetson TX2. I'm interchangeably using the word Jetson box and Jetson TX2. They're all the same. It's credit size GPU motherboard with all essential ports for ethernet, USB, wi-fi, memory, etc. 
 
-If you already have a local machine or laptop that have Ubuntu, you don't need to go an extra mile setting up the virtual box. If you don't have one like me, I installed virtualbox 6.0 in my local Mac OS. 
+If you already have a local machine or laptop that have Ubuntu, you don't need to go an extra mile setting up the virtual box. If you don't have one like me, you might want to install virtualbox 6.0 in your local laptop instead of buying a new laptop with Ubuntu OS.  
 
 - Download virtualbox and virtual box extension pack (all supported platform) <a href="https://www.virtualbox.org/wiki/Downloads">Here</a>. 
 - Install virtualbox 
@@ -43,6 +44,30 @@ If you already have a local machine or laptop that have Ubuntu, you don't need t
 
 Note
 Double clicking extension pack will just open the virtualbox but won't install automatically.  
+
+**Virtualbox**  
+
+- click "New" 
+- Name = <Your_Choice>
+- Type = Linux  
+- Version = Ubuntu 64 
+- Memory = 1024 
+- VDI (Virtualbox Disk Image) 
+- Dynamically allocated 
+- File allocation and size = 50 GB (You'd need at least 10 GB minimum) 
+
+Once the VM is created, 
+
+- select your created VM 
+- go to VirtualBox Settings 
+- `System` --> `Processors` --> 2CPU 
+- `Network` --> `Enabled Network Adapter` --> Attached to `Bridged Adapter` 
+- `Port` --> `USB` --> `Enabled USB Controller` --> `USB 3.0 (xHCI) Controller 
+
+## Host Launch 
+
+- click **Start** 
+
 
 
 
