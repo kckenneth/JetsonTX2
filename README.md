@@ -80,7 +80,16 @@ After download is done,
 - choose the `ubuntu-16.04.5-desktop-amd64.iso` image you just downloaded from the dropdown selection. 
 - When the screen asks, click `Install Ubuntu` 
 
-This will 
+This will install Ubuntu 64 in your VM. The screen display will be cropped out and sometimes you can't see the `next` button. I go by tab and press either space button or return/enter button and it works fine. To make it normal display, you can only do so after completely installing the OS. 
+
+- open terminal in your Host Ubuntu VM 
+- `sudo apt-get update` 
+
+Some do it by going into Host Ubuntu, menu bar `Devices` --> `Insert Guest Additions CD Image...`. It didn't work for me. There are several approaches to make it work. This is what I did and it automatically readjusts the screen size after the installation. 
+
+- `sudo apt-get install virtualbox-guest-additions-iso` 
+
+
 
 
 
