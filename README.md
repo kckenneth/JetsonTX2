@@ -13,7 +13,7 @@ These two are required to setup.
 
 - wireless keyboard (to connect to Jetson box)
 - wireless mouse (to connect to Jetson box)  
-You can buy wireless keyboard and mouse combo. I bought <a href=https://www.amazon.com/gp/product/B079JLY5M5/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1>this one</a> from Amazon. 
+You can buy wireless keyboard and mouse combo. I bought <a href="https://www.amazon.com/gp/product/B079JLY5M5/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1">this one</a> from Amazon. 
 
 Host
 Target
