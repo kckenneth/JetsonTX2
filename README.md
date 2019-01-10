@@ -28,7 +28,7 @@ There are a few things that you need to be familiar with.
 The target Jetson TX2 has no OS installed. So we're going to install Ubuntu 16.04 in Jetson TX2 via Host. 
 
 <p align="center">
-<img src="img/flowchart.png" width="600"></p>
+<img src="img/flowchart.png" width="800"></p>
 <p align="center">Figure. Jetson TX2 and local Host setup</p>
 
 ## Installation 
