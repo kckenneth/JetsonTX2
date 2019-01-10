@@ -118,7 +118,11 @@ This will launch the Jetpack 3.3 Installer.
 
 <p align="center">
 <img src="img/jetsontx2.png" width="600"></p>
-<p align="center">Figure. Running Jetpack 3.3</p>
+<p align="center">Figure. Jetson TX2</p>
+
+<p align="center">
+<img src="img/jetpack.png" width="600"></p>
+<p align="center">Figure. Jetpack component manager</p>
 
 
 
