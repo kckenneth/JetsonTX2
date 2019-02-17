@@ -85,13 +85,18 @@ This will install Ubuntu 64 in your VM. The screen display will be cropped out a
 - open terminal in your Host Ubuntu VM 
 ```
 sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install dkms
+sudo apt-get install build-essential
 ```
+Go to menu bar `Devices` --> `Insert Guest Additions CD Image...`. Follow the instructions in a new window in Host Ubuntu. There are several approaches to make it work. This is what I did and it automatically readjusts the screen size after the installation. Or you can go to `View` --> `Virtual Screen 1` --> `Scale to 200% (autoscaled output)`. 
 
-Some do it by going into Host Ubuntu, menu bar `Devices` --> `Insert Guest Additions CD Image...`. It didn't work for me. There are several approaches to make it work. This is what I did and it automatically readjusts the screen size after the installation. 
+Or some do by the following command. Don't know if it works
 
 ```
 sudo apt-get install virtualbox-guest-additions-iso
 ```
+Ref = <a href=https://askubuntu.com/questions/240745/how-do-i-get-a-larger-screen-resolution-in-virtualbox-on-mac-os-x>Source</a>
 
 ## Install Jetpack 3.3 
 
